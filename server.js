@@ -27,6 +27,7 @@ app.get('/nominations', (req, res) => {
 
 app.get('/year/:year', (req, res) => {
   const year = req.params.year
+  console.log({ year })
   const showWon = req.query.won
   let nominationsFromYear = data.filter((item) => item.year_award === +year)
 
